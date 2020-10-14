@@ -4,11 +4,13 @@ public class FileUploadResponse {
     private String fileName;
     private String fileType;
     private long size;
+    private String status;
 
-    public FileUploadResponse(String fileName, String fileType, long size) {
+    public FileUploadResponse(String fileName, String fileType, long size, String status) {
         this.fileName = fileName;
         this.fileType = fileType;
         this.size = size;
+        this.status = status;
     }
 
     public String getFileName() {
@@ -33,5 +35,13 @@ public class FileUploadResponse {
 
     public void setSize(long size) {
         this.size = size;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
